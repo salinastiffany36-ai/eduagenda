@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduAgenda - 3ro Informática "B"</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>📚 EduAgenda</h1>
+        <p>Unidad Educativa Fiscal Vicente Rocafuerte | 3ro Informática "B"</p>
+    </header>
+
+    <main class="contenedor">
+        <!-- Sección 1: Formulario de Registro -->
+        <section class="tarjeta">
+            <h2>➕ Nueva Tarea</h2>
+            <form id="form-tarea">
+                <div class="campo">
+                    <label for="titulo">Descripción de la tarea:</label>
+                    <input type="text" id="titulo" placeholder="Ej. Proyecto de página web" required>
+                </div>
+
+                <div class="campo">
+                    <label for="materia">Asignatura:</label>
+                    <select id="materia" required>
+                        <option value="Diseño y Desarrollo Web">Diseño y Desarrollo Web</option>
+                        <option value="Programación y Base de Datos">Programación y Base de Datos</option>
+                        <option value="Sistema Operativo y Redes">Sistema Operativo y Redes</option>
+                        <option value="Soporte Técnico">Soporte Técnico</option>
+                        <option value="Aplicaciones Ofimáticas Locales y en Línea">Aplicaciones Ofimáticas Locales y en Línea</option>
+                        <option value="Formación y Orientación Laboral">Formación y Orientación Laboral</option>
+                        <option value="Matemática">Matemática</option>
+                        <option value="Física">Física</option>
+                        <option value="Química">Química</option>
+                        <option value="Biología">Biología</option>
+                        <option value="Historia">Historia</option>
+                        <option value="Lengua y Literatura">Lengua y Literatura</option>
+                        <option value="Inglés">Inglés</option>
+                        <option value="Emprendimiento y Gestión">Emprendimiento y Gestión</option>
+                        <option value="Educación Física">Educación Física</option>
+                        <option value="Cívica y Acompañamiento Integral">Cívica y Acompañamiento Integral</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="fecha">Fecha de entrega:</label>
+                    <input type="date" id="fecha" required>
+                </div>
+
+                <button type="submit" class="btn-agregar">Guardar Tarea</button>
+            </form>
+        </section>
+
+        <!-- Sección 2: Lista de Tareas -->
+        <section class="tarjeta">
+            <h2>📋 Mis Actividades</h2>
+            <div id="lista-tareas" class="lista">
+                <!-- Aquí se insertarán las tareas dinámicamente con JavaScript -->
+            </div>
+        </section>
+
+        <!-- Sección 3: Consulta de Horario Académico -->
+        <section class="tarjeta horario-seccion">
+            <h2>🕒 Horario Académico 2026-2027 (3-INFOR. "B")</h2>
+            <div class="tabla-responsive">
+                <table class="tabla-horario">
+                    <thead>
+                        <tr>
+                            <th>Hora</th>
+                            <th>Lunes</th>
+                            <th>Martes</th>
+                            <th>Miércoles</th>
+                            <th>Jueves</th>
+                            <th>Viernes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="col-hora"><strong>1-Bach</strong><br><span>6:50 - 7:30</span></td>
+                            <td><strong>Diseño y Desarrollo Web</strong><small>Carvajal Jéssica</small></td>
+                            <td><strong>Bach-Matemática</strong><small>Toala Martín</small></td>
+                            <td><strong>Sistema Operativo y Redes</strong><small>Burgos Julio</small></td>
+                            <td><strong>Bach-Matemática</strong><small>Toala Martín</small></td>
+                            <td><strong>Bach-Química</strong><small>Espinoza Mildred</small></td>
+                        </tr>
+                        <tr>
+                            <td class="col-hora"><strong>2-Bach</strong><br><span>7:30 - 8:10</span></td>
+                            <td><strong>Bach-Historia</strong><small>Zambrano Jenny</small></td>
+                            <td><strong>Diseño y Desarrollo Web</strong><small>Carvajal Jéssica</small></td>
+                            <td><strong>Sistema Operativo y Redes</strong><small>Burgos Julio</small></td>
+                            <td><strong>Programación y Base de Datos</strong><small>Collat Wendy</small></td>
+                            <td><strong>Bach-Biología</strong><small>Guaycha Danny</small></td>
+                        </tr>
+                        <tr>
+                            <td class="col-hora"><strong>3-Bach</strong><br><span>8:10 - 8:50</span></td>
+                            <td><strong>Sistema Operativo y Redes</strong><small>Burgos Julio</small></td>
+                            <td><strong>Sistema Operativo y Redes</strong><small>Burgos Julio</small></td>
+                            <td><strong>Bach-Química</strong><small>Espinoza Mildred</small></td>
+                            <td><strong>Bach-Inglés</strong><small>Narea Ingrid</small></td>
+                            <td><strong>Programación y Base de Datos</strong><small>Collat Wendy</small></td>
+                        </tr>
+                        <tr>
+                            <td class="col-hora"><strong>4-Bach</strong><br><span>8:50 - 9:30</span></td>
+                            <td><strong>Soporte Técnico</strong><small>Bermeo David</small></td>
+                            <td><strong>Bach-Inglés</strong><small>Narea Ingrid</small></td>
+                            <td><strong>Diseño y Desarrollo Web</strong><small>Carvajal Jéssica</small></td>
+                            <td><strong>Soporte Técnico</strong><small>Bermeo David</small></td>
+                            <td><strong>Diseño y Desarrollo Web</strong><small>Carvajal Jéssica</small></td>
+                        </tr>
+                        <tr class="fila-receso">
+                            <td class="col-hora"><strong>RECESO</strong><br><span>9:30 - 9:50</span></td>
+                            <td colspan="5"><strong>RECESO BACHILLERATO</strong></td>
+                        </tr>
+                        <tr>
+                            <td class="col-hora"><strong>5-Bach</strong><br><span>9:50 - 10:30</span></td>
+                            <td><strong>Programación y Base de Datos</strong><small>Collat Wendy</small></td>
+                            <td><strong>Programación y Base de Datos</strong><small>Collat Wendy</small></td>
+                            <td><strong>Programación y Base de Datos</strong><small>Collat Wendy</small></td>
+                            <td><strong>Bach-Emprendimiento y Gestión</strong><small>Carlos Ponce</small></td>
+                            <td><strong>Bach-Cívica y Acompañamiento</strong><small>Carvajal Jéssica</small></td>
+                        </tr>
+                        <tr>
+                            <td class="col-hora"><strong>6-Bach</strong><br><span>10:30 - 11:10</span></td>
+                            <td><strong>Formación y Orientación Laboral</strong><small>Pinto Pedro</small></td>
+                            <td><strong>Soporte Técnico</strong><small>Bermeo David</small></td>
+                            <td><strong>Soporte Técnico</strong><small>Bermeo David</small></td>
+                            <td><strong>Diseño y Desarrollo Web</strong><small>Carvajal Jéssica</small></td>
+                            <td><strong>Bach-Educación Física</strong><small>Caicedo Adrián</small></td>
+                        </tr>
+                        <tr>
+                            <td class="col-hora"><strong>7-Bach</strong><br><span>11:10 - 11:50</span></td>
+                            <td><strong>Bach-Lengua y Literatura</strong><small>Zambrano Andrea</small></td>
+                            <td><strong>Aplicaciones Ofimáticas</strong><small>Molina Carolina</small></td>
+                            <td><strong>Bach-Lengua y Literatura</strong><small>Zambrano Andrea</small></td>
+                            <td><strong>Bach-Educación Física</strong><small>Caicedo Adrián</small></td>
+                            <td><strong>Bach-Historia</strong><small>Zambrano Jenny</small></td>
+                        </tr>
+                        <tr class="fila-ultima">
+                            <td class="col-hora"><strong>8-Bach</strong><br><span>11:50 - 12:30</span></td>
+                            <td><strong>Aplicaciones Ofimáticas</strong><small>Molina Carolina</small></td>
+                            <td><strong>Bach-Física</strong><small>Constantine Jefferson</small></td>
+                            <td><strong>Bach-Física</strong><small>Constantine Jefferson</small></td>
+                            <td><strong>Bach-Biología</strong><small>Guaycha Danny</small></td>
+                            <td><strong>Bach-Emprendimiento y Gestión</strong><small>Carlos Ponce</small></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
